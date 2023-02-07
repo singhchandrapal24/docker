@@ -1,12 +1,5 @@
 FROM ubuntu
 # RUN apt update 2>/dev/null | grep packages | cut -d '.' -f 1
-RUN echo $(date)
-RUN timedatectl set-local-rtc 1
-RUN apt update -y
-RUN apt install -y tzdata
-RUN echo 'Asia/Kolkata' > /etc/timezone
-RUN dpkg-reconfigure --frontend noninteractive tzdata
-
 RUN apt update -y && apt upgrade -y
 RUN apt install ntp -y
 # RUN cd /etc/apt && ls -al && sed -i 's/in\./us\./g' sources.list
