@@ -1,12 +1,5 @@
 pipeline {
     agent any
-    
-    stages {
-        stage('github login'){
-            steps{
-                git credentialsId: 'github', url: 'https://github.com/singhchandrapal24/docker.git', branch: 'main'
-            }
-        }
         
         stage('Docker Build dotnet') {
     	   agent any
