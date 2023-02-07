@@ -1,17 +1,15 @@
 pipeline {
     agent any
         
-        stage('Docker Build npm') {
+        stage('Docker Build django') {
     	   agent any
             steps {
+               sh "pwd"
+               dir('/var/jenkins_home/workspace/docker/djangokubernetesproject') {
                  sh "pwd"
                  sh "ls -l"
-                 sh 'docker build -t chandu/node:1 .'
-                   }
-                
-                }
-               
-               
+                 sh 'docker build -t chandu/npm:1 .'
+               }
       	       
             }
         
