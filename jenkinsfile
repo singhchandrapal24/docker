@@ -11,11 +11,12 @@ pipeline {
         stage('Docker Build dotnet') {
     	   agent any
             steps {
-            {
                  sh "pwd"
                  sh "ls -l"
                  sh 'docker build -t chandu/node:1 .'
-               }
+                   }
+                
+                }
                
                
       	       
