@@ -1,7 +1,7 @@
 pipeline {
     agent any
         
-        stage('Docker Build dotnet') {
+        stage('Docker Build npm') {
     	   agent any
             steps {
                  sh "pwd"
